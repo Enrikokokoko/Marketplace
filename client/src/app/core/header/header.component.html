@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="header__menu" (click)="openMenu()">
+    <img class="header__menu-img" [src]="" alt="menu" />
+    @if(isOpen) {
+    <app-menu></app-menu>
+    }
+  </div>
+
+  <div class="header__logo">
+    <img [src]="" alt="logo" />
+  </div>
+
+  <app-header-search class="header__search"> </app-header-search>
+
+  @if('isNotLoggin') {
+  <app-header-account></app-header-account>
+  } @else {
+  <div class="header__favorite-product">
+    <img src="" alt="favorite" />
+  </div>
+  <div class="header__order-list">
+    <img src="" alt="order-list" />
+  </div>
+  }
+
+  <app-header-shopping-cart> </app-header-shopping-cart>
+</div>
