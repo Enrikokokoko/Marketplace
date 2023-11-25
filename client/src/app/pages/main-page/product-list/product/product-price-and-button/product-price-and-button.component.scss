@@ -1,0 +1,30 @@
+@import '../../../../../../assets/styles/variables.scss';
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.cart {
+  height: 30px;
+  width: 30px;
+}
+
+.cart-button {
+  background-color: $main-color;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sales {
+  &__discount {
+    padding-right: 5px;
+  }
+
+  &__price {
+    text-decoration: line-through;
+  }
+}

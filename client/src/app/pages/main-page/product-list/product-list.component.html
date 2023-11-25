@@ -1,0 +1,12 @@
+<div class="slider">
+  <ngx-slick-carousel
+  #slickModal="slick-carousel"
+  [config]="productConfig"
+  >
+  @for(product of products; track product.id){
+  <div ngxSlickItem>
+    <app-product [item]="product"></app-product>
+    </div>
+  }
+  </ngx-slick-carousel>
+</div>

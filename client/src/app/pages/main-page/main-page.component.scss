@@ -1,0 +1,16 @@
+:host {
+  // position: relative;
+  // top: 100px;
+
+  .main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    &__content {
+      padding: 28.8px;
+      width: 76%;
+    }
+  }
+}
+

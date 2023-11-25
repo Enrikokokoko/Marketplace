@@ -1,0 +1,77 @@
+:host {
+  width: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .language-uk {
+    width: 62.5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1px;
+    cursor: pointer;
+  
+    &__img {
+    width: 30px;
+    height: 30px;
+    }
+  
+    &__text {
+      color: white;
+    }
+    
+    &__text:hover {
+      color: rgb(101, 184, 219);
+      transition: 0.5s;
+    }
+  }
+  
+  .language-eng {
+    width: 63.5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1px 0 2px;
+    cursor: pointer;
+  
+    &__img {
+    width: 30px;
+    height: 30px;
+    }
+  
+    &__text {
+      color: white;
+    }
+    &__text:hover {
+      color: rgb(101, 184, 219);
+      transition: 0.5s;
+    }
+    
+  }
+
+  .branch {
+    background-color: rgb(173, 173, 173);
+    height: 40px;
+    width: 1px;
+    margin: 0px 5px 0px 5px;
+  }
+
+  .disabled {
+    p {
+      color: rgb(107, 107, 107);
+    }
+    cursor: default;
+  }
+
+  .disabled:hover {
+    p {
+      color:white;
+    }
+
+    background-color: rgb(51, 51, 145);
+    border-radius: 50px;
+    transition: 0.5s;
+  }
+}
+

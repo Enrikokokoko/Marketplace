@@ -1,0 +1,20 @@
+.our-products {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+
+  &__items {
+    display: flex;
+    // flex-basis: calc(33.33% - 20px);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0px;
+  }
+}
+
+.title {
+  font-size: 20px;
+}

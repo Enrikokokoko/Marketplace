@@ -1,0 +1,8 @@
+<div class="item">
+  <img [src]="item.img" class="img" routerLink="product">
+  <div>
+    <p class="item__title">{{item.name}}</p>
+    <app-product-evaluation-and-feedback [item]="item"></app-product-evaluation-and-feedback>
+    <app-product-price-and-button [item]="item"></app-product-price-and-button>
+  </div>
+</div>

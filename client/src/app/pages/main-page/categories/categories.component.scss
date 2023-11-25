@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  padding: 23px;
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .list {
+    height: 64px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+ .content {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+      line-height: 30px;
+    }
+
+    .title {
+      font-size: 32px;
+      cursor: pointer;
+    }
+  }
+}
+

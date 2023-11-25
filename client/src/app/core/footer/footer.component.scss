@@ -1,0 +1,86 @@
+@import '../../../assets/styles/variables.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 330px;
+  background-color: $main-color;
+
+  &__logo {
+    width: 250px;
+    height: 70px;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 600;
+    color: white;
+  }
+
+  &__company-info {
+    height: 250px;
+    width: 305px;
+    line-height: 30px;
+    color: white;
+  }
+
+  &__partners {
+    height: 250px;
+    width: 300px;
+    line-height: 30px;
+    color: white;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    color: rgb(170, 170, 170);
+    transition: 0.5s;
+  }
+  
+  &__help {
+    height: 250px;
+    width: 300px;
+    color: rgb(213, 213, 213);
+    line-height: 30px;
+  }
+  
+  &__stay-with-us {
+    display: flex;
+    height: 250px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.under-footer {
+  color:white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  background-color: rgb(2, 2, 22);
+}

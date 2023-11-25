@@ -1,0 +1,37 @@
+@import '../../../../assets/styles/variables.scss';
+
+.shopping-cart {
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &__img {
+    height: 35px;
+    width: 35px;
+  }
+
+  &__info {
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    height: 14px;
+    color: white;
+  }
+  
+  &__count {
+    display: flex;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    color: $main-color;
+    background-color: white;
+    border-radius: 50px;
+    height: 14px;
+  }
+}

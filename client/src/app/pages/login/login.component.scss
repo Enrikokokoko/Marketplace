@@ -1,0 +1,97 @@
+@import '../../../assets/styles/variables.scss';
+
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+    margin-bottom: 100px;
+
+    &__input {
+      height: 50px;
+      width: 310px;
+      border-radius: 5px;
+      border: 1px solid #cbc6c6;
+      padding-left: 15px
+    }
+
+    &__input:focus {
+      outline: none;
+      border: 1px solid #cbc6c6;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    justify-content: space-around
+  }
+
+  .button {
+    border-radius: 5px;
+    background-color: $main-color;
+    color: white;
+    width: 310px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .button:hover {
+    background-color: rgb(19, 19, 108);
+  }
+
+  .line {
+    width: 310px;
+    height: 1px;
+    background-color: #cbc6c6;
+    display: flex;
+    justify-content: center;
+  }
+
+  .line-text {
+    margin-top: -10px;
+    background-color: white;
+    text-align: center;
+    width: 30px;
+  }
+
+  .second-button {
+    border-radius: 5px;
+    background-color: rgb(0, 179, 0);
+    color: white;
+    width: 310px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .second-button:hover {
+    background-color: rgb(29, 211, 29);
+  }
+
+  .title {
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Open Sans';
+  }
+
+  .logo {
+    height: 95px;
+    width: 210px;
+  }
+}

@@ -1,13 +1,15 @@
 <div class="header">
-  <div class="header__menu" (click)="openMenu()">
-    <img class="header__menu-img" [src]="" alt="menu" />
-    @if(isOpen) {
-    <app-menu></app-menu>
-    }
-  </div>
-
-  <div class="header__logo">
-    <img [src]="" alt="logo" />
+  <div class="header__menu-logo">
+    <div class="header__menu" (click)="openMenu()">
+        <img class="header__menu-img" [src]="menu" alt="menu" />
+      @if(statusMenu) {
+      <app-menu></app-menu>
+      }
+    </div>
+  
+    <div class="header__logo">
+      <img [src]="logo" alt="logo" class="header__logo-img" routerLink="main"/>
+    </div>
   </div>
 
   <app-header-search class="header__search"> </app-header-search>
@@ -22,6 +24,8 @@
     <img src="" alt="order-list" />
   </div>
   }
+  <app-header-language></app-header-language>
 
-  <app-header-shopping-cart> </app-header-shopping-cart>
+  <app-header-shopping-cart></app-header-shopping-cart>
+
 </div>

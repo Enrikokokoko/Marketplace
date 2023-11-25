@@ -1,1 +1,15 @@
-<p>header-language works!</p>
+<div class="language-eng" (click)="switchLanguage()" [ngClass]="{'disabled': isLanguage}">
+@if(isLanguage) {
+    <img [src]="eng" alt="eng" class="language-eng__img
+    ">
+  }
+  <p class="language-eng__text">ENG</p>
+  </div>
+  <div class="branch"></div>
+  <div class="language-uk" (click)="switchLanguage()" [ngClass]="{'disabled': !isLanguage}">
+    @if(!isLanguage) {
+    <img [src]="uk" alt="uk" class="language-uk__img">
+    }
+  <p class="language-uk__text">UK</p>
+</div>
+

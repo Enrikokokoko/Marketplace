@@ -1,0 +1,1 @@
+export const LOGO = 'assets/img/header/logo-blue.png'

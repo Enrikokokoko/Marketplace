@@ -1,0 +1,7 @@
+export const MENU = 'assets/img/header/menu.png'
+export const LOGO = 'assets/img/header/logo-transparent.png'
+export const ACCOUNT = 'assets/img/header/account.png'
+export const LANGUAGE_UK = 'assets/img/header/language-uk-icon.png'
+export const LANGUAGE_ENG = 'assets/img/header/language-eng-icon.png'
+export const CART = 'assets/img/header/shopping-cart.png'
+export const ARROW = 'assets/img/header/arrow.png'

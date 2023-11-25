@@ -1,5 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  padding: 0;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+textarea,
+form,
+img {
   margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.slick-prev::before, .slick-next::before{
+   color: black !important;
+   font-size: 25px !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+  z-index: 1 !important;
+  margin-left: 10px;
+}
+
+.slick-next {
+  right: 0 !important;
+  z-index: 1 !important;
+  margin-right: 10px;
+}
+
+.slick-dots {
+  bottom: 0 !important;
 }

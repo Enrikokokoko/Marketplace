@@ -1,1 +1,38 @@
-<p>footer works!</p>
+<div class="footer">
+  <div class="footer__partners">
+    <img [src]="logo" alt="logo" class="footer__logo">
+    <p class="footer__title">PARTNERS</p>
+    <ul class="footer__list">
+      @for (info of partnerInfo; track info.id) {
+        <li class="footer__item">{{info.title}}</li>
+      }
+    </ul>
+  </div>
+  <div class="footer__help">
+    <p class="footer__title">HELP</p>
+    <ul class="footer__list">
+      @for (info of helpInfo; track info.id) {
+        <li class="footer__item">{{info.title}}</li>
+      }
+    </ul>
+  </div>
+  <div class="footer__company-info">
+    <p class="footer__title">INFORMATION ABOUT THE COMPANY</p>
+    <ul class="footer__list">
+      @for (info of companyInfo; track info.id) {
+        <li class="footer__item">{{info.title}}</li>
+      }
+    </ul>
+  </div>
+  <div class="footer__stay-with-us">
+    <p class="footer__title">STAY WITH US</p>
+    <div class="icons">
+      @for (icon of iconInfo; track icon.id) {
+        <img [src]="icon.img" alt="icon" class="icon">
+      }
+    </div>
+  </div>
+</div>
+<div class="under-footer">
+  <p>© 2023-202? Online store «FairGround», Inc. or its affiliates.  All rights reserved.</p>
+</div>

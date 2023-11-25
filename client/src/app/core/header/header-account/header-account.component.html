@@ -1,1 +1,18 @@
-<p>header-account works!</p>
+<div class="account" (mouseover)="openAuth()" (mouseleave)="closeAuth()" >
+  <img [src]="account" alt="account-img" class="account__img">
+  <div class="account__info">
+    <p class="account__title">Welcome</p>
+    <div class="account__regist">
+      <p class="account__text">Sign in / Sign up</p>
+      <img [src]="arrow" alt="arrow" class="arrow" [ngClass]="{ 'switch-arrow': statusAccount }">
+    </div>
+  </div>
+  @if(statusAccount) {
+    <div class="auth" [ngClass]="{ 'auth-disabled': disableBlock }">
+      <button class="auth__sign" routerLink='login'>Sign in</button>
+      <button class="auth__register" routerLink='registration'>Sign up</button>
+    </div>
+  }
+</div>
+
+

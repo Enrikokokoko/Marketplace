@@ -1,0 +1,15 @@
+<div class="content">
+  @if(!item.discountPrice) {
+    <div class="sale">
+      <span>{{item.price}} $</span>
+    </div>
+  } @else {
+    <div class="sales">
+      <span class="sales__discount">{{item.discountPrice}} $</span>
+      <span class="sales__price">{{item.price}} $</span>
+    </div>
+  }
+  <button class="cart-button">
+    <img [src]="cart" alt="shopping-cart" class="cart">
+  </button>
+</div>
