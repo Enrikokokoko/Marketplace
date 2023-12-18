@@ -23,10 +23,10 @@ export const HELP = [
 ]
 
 export const STAY_WITH_US = [
-  {id: 1, img: 'assets/img/footer/facebook.png'},
-  {id: 2, img: 'assets/img/footer/instagram.png'},
-  {id: 3, img: 'assets/img/footer/messenger.png'},
-  {id: 4, img: 'assets/img/footer/telegram.png'},
-  {id: 5, img: 'assets/img/footer/twitter.png'},
-  {id: 6, img: 'assets/img/footer/whatsapp.png'}
+  {id: 1, img: 'assets/img/footer/facebook.png', url: 'https://www.facebook.com/profile.php?id=100010744274618'},
+  {id: 2, img: 'assets/img/footer/instagram.png', url: 'https://www.instagram.com'},
+  {id: 3, img: 'assets/img/footer/messenger.png', url: 'https://www.messenger.com/'},
+  {id: 4, img: 'assets/img/footer/telegram.png', url: 'https://t.me/enriko_ray'},
+  {id: 5, img: 'assets/img/footer/twitter.png', url: 'https://twitter.com'},
+  {id: 6, img: 'assets/img/footer/whatsapp.png', url: 'https://www.whatsapp.com/'}
 ]

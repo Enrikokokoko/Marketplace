@@ -1,0 +1,56 @@
+@import '../../../../assets/styles/variables.scss';
+
+.category-img {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.category-list {
+  list-style-type: none;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 1.4%;
+}
+
+.item-category {
+  width: 250px;
+  margin: 20px;
+  box-shadow: 0px 2px 4px gray;
+  padding-bottom: 15px;
+}
+
+.item-category:hover {
+  box-shadow: 0px 3px 6px gray;
+}
+
+
+.category-list {
+  border-top: 1px solid gray;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+.subcategory {
+  font-family: sans-serif;
+  color: $main-color;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.subcategory:hover {
+  color: rgb(24, 24, 250);
+}
+
+.title {
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: $main-color;
+  text-decoration: underline;
+  margin: 10px 0px;
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ import { OurProductsComponent } from './our-products/our-products.component';
 import { FavoriteProductsComponent } from './favorite-products/favorite-products.component';
 import { NewProductsComponent } from './new-products/new-products.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ROUTES, RouterModule } from '@angular/router';
+import { ROUTES, RouterModule, RouterOutlet } from '@angular/router';
 import { routes } from '../../app.routes';
 
 @Component({
@@ -22,7 +22,8 @@ import { routes } from '../../app.routes';
     FavoriteProductsComponent,
     NewProductsComponent,
     ProductListComponent,
-    RouterModule
+    RouterModule,
+    RouterOutlet
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'

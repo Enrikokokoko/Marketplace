@@ -1,1 +1,7 @@
-<p>product-page works!</p>
+<div class="buttons">
+  @for(button of buttons; track button.id) {
+    <div class="button" (click)="redirctToChoosenButton(button.url)">{{button.name}}</div>
+  }
+</div>
+<router-outlet></router-outlet>
+<app-product-list></app-product-list>

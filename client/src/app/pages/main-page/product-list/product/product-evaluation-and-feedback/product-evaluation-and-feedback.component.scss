@@ -1,6 +1,7 @@
 .evaluate{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 15px;
 }
 
 .score {
@@ -10,4 +11,5 @@
 .star {
   height: 14px;
   width: 14px;
+  margin-top: 2px;
 }

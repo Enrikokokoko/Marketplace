@@ -8,21 +8,21 @@
     </div>
   
     <div class="header__logo">
-      <img [src]="logo" alt="logo" class="header__logo-img" routerLink="main"/>
+      <img [src]="logo" alt="logo" class="header__logo-img" routerLink="main" (click)="smoothScroll()"/>
     </div>
   </div>
 
   <app-header-search class="header__search"> </app-header-search>
 
-  @if('isNotLoggin') {
-  <app-header-account></app-header-account>
+  @if(authService.isLoggedIn$ | async) {
+    <div class="header__favorite-product" routerLink="cabinet/wishlist">
+      <img [src]="favorite" class="favorite" />
+    </div>
+    <div class="header__order-list">
+      <img [src]="orderList" class="order-list" routerLink="cabinet/orders"/>
+    </div>
   } @else {
-  <div class="header__favorite-product">
-    <img src="" alt="favorite" />
-  </div>
-  <div class="header__order-list">
-    <img src="" alt="order-list" />
-  </div>
+    <app-header-account></app-header-account>
   }
   <app-header-language></app-header-language>
 

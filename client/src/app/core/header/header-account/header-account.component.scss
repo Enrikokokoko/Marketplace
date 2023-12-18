@@ -40,11 +40,14 @@
 
   &__title {
     color:rgb(174, 174, 174);
+    font-family: sans-serif;
   }
 
   &__text {
     color:white;
     font-weight: 600;
+    font-size: 14px;
+    font-family: sans-serif;
   }
 
   .auth {
@@ -80,6 +83,7 @@
       margin-bottom: 5px;
       cursor: pointer;
       transition: 0.5s;
+      font-family: sans-serif;
     }
 
     &__sign:hover {
@@ -91,6 +95,7 @@
       font-weight: 600;
       color:black;
       cursor: pointer;
+      font-family: sans-serif;
     }
 
     &__register:hover {

@@ -1,0 +1,8 @@
+<div class="feedback-container">
+  @if(data.feedback.length > 0){
+    <app-stars [data]="data"></app-stars>
+    <p class="feedback">{{data.feedback.length}} feedback</p>
+  } @else {
+    <p class="feedback">leave feedback</p>
+  }
+</div>

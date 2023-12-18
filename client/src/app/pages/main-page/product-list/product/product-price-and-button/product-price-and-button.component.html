@@ -9,7 +9,7 @@
       <span class="sales__price">{{item.price}} $</span>
     </div>
   }
-  <button class="cart-button">
+  <button class="cart-button" (click)="addItem(item)">
     <img [src]="cart" alt="shopping-cart" class="cart">
   </button>
 </div>

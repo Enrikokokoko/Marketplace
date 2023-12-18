@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Product } from '../../../../../shared/interface/product';
+import { Product, Product_One } from '../../../../../shared/interface/product';
 import { STAR } from '../../../../../shared/constants/product/product';
 
 @Component({
@@ -11,7 +11,7 @@ import { STAR } from '../../../../../shared/constants/product/product';
   styleUrl: './product-evaluation-and-feedback.component.scss'
 })
 export class ProductEvaluationAndFeedbackComponent {
-  @Input() item!: Product;
+  @Input() item!: Product; 
 
   public star = STAR;
 }

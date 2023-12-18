@@ -1,0 +1,261 @@
+@import "../../../../assets/styles/variables.scss";
+
+:host {
+  display: flex;
+  margin-bottom: 50px;
+  
+  .foto {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .info {
+    width: 45%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 40px;
+  }
+
+  .slider {
+    width: 90%;
+    height: 550px;
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  .slider-img {
+    margin-left: auto;
+    margin-right: auto;
+    height: 550px;
+    width: 550px;
+  }
+
+  ::ng-deep .slick-prev {
+    left: 0 !important;
+    z-index: 1 !important;
+    margin-left: 15px;
+  }
+
+  ::ng-deep .slick-next {
+    right: 0 !important;
+    z-index: 1 !important;
+    margin-right: 15px;
+  }
+
+  ::ng-deep .slick-prev::before,
+  ::ng-deep .slick-next::before {
+    font-size: 35px !important;
+  }
+
+  .selected {
+    box-shadow: 0px 0px 5px blue;
+  }
+
+  .img {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+
+  .containter-img {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .block-img {
+    margin-left: 60px;
+    gap: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  .price-buy {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 130px;
+  }
+
+  .discount {
+    color: $main-color;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  .price {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: $main-color;
+  }
+
+  .price-status {
+    text-decoration: line-through;
+  }
+
+  .amount {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: gray;
+    margin-top: -15px;
+  }
+
+  .only-price {
+    color: $main-color;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buy {
+    height: 50px;
+    width: 200px;
+    background-color: $main-color;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: 0.4s;
+  }
+
+  .buy:hover {
+    background-color: rgb(5, 5, 165);
+    border: 1px solid $main-color;
+    box-shadow: 0px 0px 10px rgb(72, 72, 255);
+  }
+
+  .cart {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(42, 42, 255);
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: 0.4s;
+  }
+
+  .cart:hover {
+    background-color: rgb(101, 101, 243);
+    border: 1px solid blue;
+    box-shadow: 0px 0px 10px rgb(131, 131, 232);
+  }
+
+  .favorite {
+    height: 50px;
+    width: 200px;
+    border: 1px solid $main-color;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    color: $main-color;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.4s;
+  }
+
+  .favorite:hover {
+    background-color: rgb(103, 103, 241);
+    color: white;
+    border: 1px solid blue;
+    box-shadow: 0px 0px 10px rgb(118, 118, 228);
+  }
+
+  .payment {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .payment-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .img-payment {
+    width: 60px;
+    height: 60px;
+  }
+
+  .img-payment-cont {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 60px;
+  }
+
+  .payment-detail {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+  }
+
+  .payment-detail-title {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  .title-pay {
+    font-weight: 600;
+  }
+
+  .icon-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .return {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .ship {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .detail-container {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .inf-detail {
+    width: 335px;
+  }
+
+  .detail-inf {
+    margin-top: -35px;
+  }
+}

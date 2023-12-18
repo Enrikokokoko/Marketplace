@@ -1,0 +1,45 @@
+<div class="feedback">
+  <p class="title">Customer feedback of {{productData.name}}</p>
+  <div class="container-review">
+    <div class="score-write">
+      <div class="score">
+        <div class="score__evaluation">
+          <div class="evaluation">
+            <app-stars [data]="productData"></app-stars>
+            <p>{{amount}} out of 5</p>
+          </div>
+          <p>{{productData.feedback.length}} global ratings</p>
+        </div>
+        <app-frame [data]="productData" [rating]="5"></app-frame>
+        <app-frame [data]="productData" [rating]="4"></app-frame>
+        <app-frame [data]="productData" [rating]="3"></app-frame>
+        <app-frame [data]="productData" [rating]="2"></app-frame>
+        <app-frame [data]="productData" [rating]="1"></app-frame>
+      </div>
+      <div class="write">
+        <p class="write__title">Review this product</p>
+        <p class="write__info">Share your thoughts with other customers</p>
+        <button class="write__button" (click)="openPopup()">Write a customer review</button>
+        @if(popupStatus) {
+          <app-popup (closePopupEmit)="closePopup($event)"></app-popup>
+        }
+      </div>
+    </div>
+    <div class="reviews">
+      @for(review of productData.feedback; track productData.feedback) {
+        <div class="container">
+          <p class="reviews__iname">{{review.author.firstName}} {{review.author.lastName}}</p>
+          <p class="reviews__info">Feedback from the customer. The seller: FairyGroup.</p>
+          <app-stars [review]="review"></app-stars>
+          <p class="reviews__text">{{review.text}}</p>
+          @if(review.advantage) {
+            <p class="reviews__advantage"><span class="plus-minus">Advantage: </span>{{review.advantage}}</p>
+          }
+          @if(review.disadvantage) {
+            <p class="reviews__disadvantage"><span class="plus-minus">Disadvantage: </span>{{review.disadvantage}}</p>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>

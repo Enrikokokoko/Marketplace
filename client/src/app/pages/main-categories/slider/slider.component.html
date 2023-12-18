@@ -1,0 +1,12 @@
+<div class="slider-category">
+  <ngx-slick-carousel
+  #slickModal="slick-carousel"
+  [config]="categoryConfig"
+  >
+  @for(category of categories; track category.id){
+  <div ngxSlickItem>
+      <img [src]="category.img_slider" alt="slide" class="slider-category-img">
+    </div>
+  }
+  </ngx-slick-carousel>
+</div>

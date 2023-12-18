@@ -1,0 +1,43 @@
+<div class="main">
+  <p class="title">Characteristic {{productData.name}}</p>
+  <app-rating [data]="productData"></app-rating>
+  <div class="characteristics">
+    @for(characteristic of productData.characteristic; track productData.characteristic) {
+      <div class="value">
+        <div class="name">
+          <p class="charact-name">{{characteristic.name}}: </p>
+        </div>
+        <div class="charact">
+          @for(value of characteristic.value; track value) {
+            <p>{{value}}</p>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
+<div class="mini-product">
+  <div class="container-block">
+    <div class="container-product">
+      <img [src]="productData.img[0].image" class="img-product">
+      <p class="name-product">{{productData.name}}</p>
+    </div>
+    <div class="buttons-price">
+      <div class="price-rating">
+        @if(productData.discountPrice) {
+          <p class="info-price">${{productData.discountPrice}}</p>
+        } @else {
+          <p class="info-price">${{productData.price}}</p>
+        }
+        <div class="score">
+          <p class="amount">{{amount}}</p>
+          <img [src]="starBlue" class="img-star">
+        </div>
+      </div>
+      <div class="button">
+        <button class="buy">BUY</button>
+        <button class="cart">TO CART</button>
+      </div>
+    </div>
+  </div>
+</div>

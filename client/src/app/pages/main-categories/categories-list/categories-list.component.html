@@ -1,0 +1,13 @@
+<div class=main>
+  @for(category of categories; track category.id) {
+    <div class="item-category">
+      <img [src]="category.img_category" alt="" class="category-img" (click)="redirectToSubcategory(category.name)">
+      <ul class="category-list">
+        <p class="title" (click)="redirectToSubcategory(category.name)">{{category.name}}</p>
+          @for(subcategory of category.subcategories; track subcategory.id){
+            <li class="subcategory" (click)="redirectToProduct(subcategory.name)">{{subcategory.name}}</li>
+          }
+        </ul>
+    </div>
+  }
+</div>

@@ -1,3 +1,56 @@
-<div class="shopping-cart">
+<div class="shopping-cart" #popup>
+  <div class="top-popup">
+    <p class="title">Cart</p>
+    <img [src]="blackCross" class="black-cross" (click)="closePopup()">
+  </div>
 
+  <div class="container-product">
+    @if(this.cartItem.length > 0) {
+      @for(item of this.cartItem; track item.id) {
+        <div class="product">
+          <div class="info">
+            <div class="img-container">
+              <img [src]="item.img" class="img">
+            </div>
+            <div class="name-count">
+              <p>{{item.name}}</p>       
+              <div class="quantity">
+                <img [src]="minus" class="minus" (click)="decreaseQuantity(+item.id)">
+                <div class="count">{{quantity}}</div>
+                <img [src]="plus" class="plus" (click)="increaseQuantity(+item.id)">
+              </div>
+            </div>
+          </div>
+          <div class="price-dots">
+            <div>
+              <img [src]="cross" class="dots" (click)="removeItem(item)">
+            </div>
+            <div>
+              @if(item.discountPrice){
+                <p class="price">${{item.price}}</p>
+                <p class="discount-price">${{item.discountPrice}}</p>
+              } @else {
+                <p class="only-price">${{item.price}}</p>
+              }
+            </div>
+          </div>
+        </div>
+      }
+
+      <div class="order">
+        <div class="continue-purchases">
+          <p>continue shopping</p>
+        </div>
+        <div class="total-price">
+          <p class="price-value">${{totalPrice}}</p>
+          <button class="order-button">Place order</button>
+        </div>
+      </div>
+    } @else {
+      <div class="empty">
+        <p class="empty-text">'Shopping cart is empty, but it's never too late to fix that</p>
+        <img [src]="emptyCart" class="empty-img">
+      </div>
+    }
+  </div>
 </div>

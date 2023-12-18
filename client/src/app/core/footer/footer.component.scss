@@ -17,6 +17,7 @@
   &__title {
     font-weight: 600;
     color: white;
+    font-family: sans-serif;
   }
 
   &__company-info {
@@ -24,6 +25,7 @@
     width: 305px;
     line-height: 30px;
     color: white;
+    font-family: sans-serif;
   }
 
   &__partners {
@@ -31,6 +33,7 @@
     width: 300px;
     line-height: 30px;
     color: white;
+    font-family: sans-serif;
   }
 
   &__list {
@@ -49,8 +52,9 @@
   &__help {
     height: 250px;
     width: 300px;
-    color: rgb(213, 213, 213);
+    color: white;
     line-height: 30px;
+    font-family: sans-serif;
   }
   
   &__stay-with-us {
@@ -58,7 +62,7 @@
     height: 250px;
     width: 300px;
     flex-direction: column;
-    justify-content: flex-end;
+    line-height: 30px;
   }
 
   .icons {
@@ -72,6 +76,12 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+
+  .icon:hover {
+    box-shadow: 0px 0px 10px gray;
   }
 }
 

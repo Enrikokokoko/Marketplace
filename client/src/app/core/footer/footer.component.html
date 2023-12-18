@@ -1,6 +1,6 @@
 <div class="footer">
   <div class="footer__partners">
-    <img [src]="logo" alt="logo" class="footer__logo">
+    <img [src]="logo" alt="logo" class="footer__logo" (click)="smoothScroll()" routerLink="/main">
     <p class="footer__title">PARTNERS</p>
     <ul class="footer__list">
       @for (info of partnerInfo; track info.id) {
@@ -28,7 +28,9 @@
     <p class="footer__title">STAY WITH US</p>
     <div class="icons">
       @for (icon of iconInfo; track icon.id) {
-        <img [src]="icon.img" alt="icon" class="icon">
+        <a [href]="icon.url">
+          <img [src]="icon.img" alt="icon" class="icon">
+        </a>
       }
     </div>
   </div>

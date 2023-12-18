@@ -1,0 +1,26 @@
+.slider-category {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.slider-category-img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  width: 800px;
+}
+
+::ng-deep .slick-prev {
+  left: 150px !important;
+  z-index: 1 !important;
+  margin-left: 10px;
+}
+
+::ng-deep .slick-next {
+  right: 150px !important;
+  z-index: 1 !important;
+  margin-right: 10px;
+}
+

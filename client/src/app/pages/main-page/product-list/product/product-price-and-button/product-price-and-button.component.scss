@@ -4,19 +4,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0px 15px;
 }
 .cart {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
 }
 
 .cart-button {
   background-color: $main-color;
-  border-radius: 50px;
+  border-radius: 5px;
+  height: 30px;
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.cart-button:hover {
+  background-color: rgb(28, 28, 239);
 }
 
 .sales {

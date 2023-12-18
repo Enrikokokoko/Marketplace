@@ -1,0 +1,76 @@
+    <div class="foto">
+      <div class="slider">
+        <ngx-slick-carousel
+        #slickModal
+        [config]="productConfig"
+        (afterChange)="onSlideChange($event)"
+        >
+        @for(img of productData.img; track img.id) {
+          <div ngxSlickItem>
+            <img [src]="img.image" class="slider-img"
+            >
+          </div>
+          }
+        </ngx-slick-carousel>
+      </div>
+      
+      <div class="block-img">
+        @for(img of productData.img; track img.id) {
+            <div class="containter-img"
+            [ngClass]="{selected: isImageSelected(img.id)}"
+            >
+            <img [src]="img.image"
+            (click)="selectImage(img)"  
+            class="img"
+            >
+          </div>
+          }
+      </div>
+  </div>
+  
+  <div class="info">
+    <p class="title">{{productData.name}}</p>
+    <app-rating [data]="productData"></app-rating>
+    <div class="price-buy">
+      <div class="price-container">
+        @if(productData.discountPrice){
+        <p class="discount">Price ${{productData.discountPrice}}</p>
+        <p class="price">Was <span class="price-status">${{productData.price}}</span></p>
+        <p class="amount">Save ${{productData.price - productData.discountPrice}} ({{amount}}% off)</p>
+        } @else {
+          <p class="only-price">Price ${{productData.price}}</p>
+        } 
+      </div>
+      <div class="buttons">
+        <button class="buy">BUY</button>
+        <button class="cart">TO CART</button>
+        <button class="favorite">TO FAVORITE</button>
+      </div>
+    </div>
+    <div class="payment">
+      <p class="payment-detail-title">Purchase detail</p>
+      <div class="detail-container">
+        <div class="ship">
+          <img [src]="delivery" class="icon-img">
+          <p class="payment-detail">Shipping: {{choosenCity}}</p>
+        </div>
+        <p class="detail-inf">Contact supplier to negotiate shipping details</p>
+      </div>
+      <div class="detail-container">
+        <div class="return">
+          <img [src]="return" class="icon-img">
+          <p class="payment-detail">Returns & Refunds:</p>
+        </div>
+        <p class="inf-detail">30 days returns. Buyer pays for return shipping/ Return defective products to our local warehouse for free</p>
+      </div>
+      <div class="payment-card">
+        <img [src]="guard" class="icon-img">
+        <p class="payment-detail title-pay">Paymant: </p>
+        <div class="img-payment-cont">
+        @for(img of payment; track payment) {
+            <img [src]="img" class="img-payment">
+          }
+        </div>
+        </div> 
+    </div>
+  </div>

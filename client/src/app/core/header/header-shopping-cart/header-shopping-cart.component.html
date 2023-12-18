@@ -1,9 +1,9 @@
-<div class="shopping-cart" (click)="openShoppingCart()">
-  <img [src]="cart" alt="cart" class="shopping-cart__img">
+<div class="shopping-cart">
+  <img [src]="cart" alt="cart" class="shopping-cart__img" (click)="openShoppingCart()">
   <div class="shopping-cart__info">
-    <div class="shopping-cart__count">{{ count }}</div>
+    <div class="shopping-cart__count">{{count}}</div>
     <p class="shopping-cart__text">Cart</p>
-    @if(statusShoppingCart){
+    @if(isOpen){
       <app-shopping-cart></app-shopping-cart>
     }
   </div>

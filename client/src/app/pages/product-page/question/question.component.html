@@ -1,0 +1,39 @@
+<div class="main">
+  <p class="title">Customer questions about {{productData.name}}</p>
+  <div class="container-question">
+    <div class="question">
+      @for(question of productData.question; track productData.question) {
+        <div class="container">
+          <p class="question__iname">{{question.author.firstName}} {{question.author.lastName}}</p>
+          <p class="question__info">Feedback from the customer. The seller: FairyGroup.</p>
+          <p class="question__text">{{question.text}}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+<div class="mini-product">
+  <div class="container-block">
+    <div class="container-product">
+      <img [src]="productData.img[0].image" class="img-product">
+      <p class="name-product">{{productData.name}}</p>
+    </div>
+    <div class="buttons-price">
+      <div class="price-rating">
+        @if(productData.discountPrice) {
+          <p class="info-price">${{productData.discountPrice}}</p>
+        } @else {
+          <p class="info-price">${{productData.price}}</p>
+        }
+        <div class="score">
+          <p class="amount">{{amount}}</p>
+          <img [src]="starBlue" class="img-star">
+        </div>
+      </div>
+      <div class="button">
+        <button class="buy">BUY</button>
+        <button class="cart">TO CART</button>
+      </div>
+    </div>
+  </div>
+</div>

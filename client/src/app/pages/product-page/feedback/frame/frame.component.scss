@@ -1,0 +1,65 @@
+.frame-score {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.frame {
+  position: absolute;
+  width: 256px;
+  height: 30px;
+  margin-left: -1px;
+}
+
+.border {
+  height: 27px;
+  width: 250px;
+  position: absolute;
+  z-index: 2;
+  border: 1.8px solid rgb(164, 164, 164);
+  border-radius: 10px;
+}
+
+.effect-border {
+  border: 1.8px solid rgb(73, 73, 235);
+}
+
+.background {
+  height: 29px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #236efc;
+}
+
+.unbackground {
+  height: 29px;
+  width: 251px;
+  border-radius: 10px;
+  background-color: rgb(220, 220, 220);
+  position: absolute;
+  z-index: -1;
+}
+
+.effect {
+  background-color: rgb(197, 197, 254);
+}
+
+.effect-text {
+  color:rgb(73, 73, 235);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.procent{
+  position: absolute;
+  left: 352px;
+}
+
+.rating {
+  margin-right: 5px;
+}

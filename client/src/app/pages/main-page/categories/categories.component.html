@@ -1,11 +1,9 @@
 <img [src]="img" alt="list" class="list">
 <div class="content">
-  <a href="/category" class="link">
-    <p class="title">Categories</p>
-  </a>
+    <p class="title" (click)="redirectToCategory()">Categories</p>
   <div class="categories">
   @for(categ of categories; track categ.id) {
-    <span>{{categ.name}}</span>
+    <span class="category-name">{{categ.name}}</span>
   } 
   </div>
 </div>

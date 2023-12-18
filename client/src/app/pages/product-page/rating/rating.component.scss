@@ -1,0 +1,18 @@
+@import '../../../../assets/styles/variables.scss';
+
+.feedback-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.feedback {
+  font-size: 19px;
+  font-family: sans-serif;
+  color: $main-color;
+  cursor: pointer;
+}
+
+.feedback:hover {
+  color: rgb(96, 96, 231);
+}

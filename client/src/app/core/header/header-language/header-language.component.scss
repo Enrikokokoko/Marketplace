@@ -19,6 +19,7 @@
   
     &__text {
       color: white;
+      font-family: sans-serif;
     }
     
     &__text:hover {
@@ -42,7 +43,9 @@
   
     &__text {
       color: white;
+      font-family: sans-serif;
     }
+    
     &__text:hover {
       color: rgb(101, 184, 219);
       transition: 0.5s;

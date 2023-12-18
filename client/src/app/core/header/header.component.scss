@@ -7,7 +7,7 @@
     display: flex;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 4;
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px 0px 25px;
@@ -41,5 +41,17 @@
     &__menu, &__logo{
       cursor: pointer;
     }
+  }
+
+  .favorite {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .order-list {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
   }
 }

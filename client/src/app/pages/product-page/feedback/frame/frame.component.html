@@ -1,0 +1,10 @@
+<div class="container" (mouseover)="onBorder()" (mouseleave)="outOfBorder()">
+  <p class="rating" [ngClass]="{'effect-text': statusReview}" >{{rating}} star</p>
+  <div class="frame-score">
+    <img [src]="frame" class="frame">
+    <div class="border"[ngClass]="{'effect-border': statusBorder}"></div>
+    <div class="background" [ngStyle]="{'width.px': frameWidth}"></div>
+    <div class="unbackground" [ngClass]="{'effect': statusBorder}"></div>
+  </div>
+  <p class="procent" [ngClass]="{'effect-text': statusReview}">{{procent}}%</p>
+</div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CATEGORIES, LIST } from '../../../shared/constants/categories/categories';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -11,8 +11,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './categories.component.scss'
 })
 export class CategoriesComponent {
+  public constructor(private router: Router) {}
+
   public categories = CATEGORIES;
   public img = LIST;
 
-  public constructor() {}
+  public redirectToCategory(): void {
+    this.router.navigateByUrl('category')
+  }
 }

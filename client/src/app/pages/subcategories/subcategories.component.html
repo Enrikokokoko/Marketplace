@@ -1,0 +1,15 @@
+@if(subcategories) {
+  <p class="title">{{subcategories[0].name}}</p>
+  @for(subcategory of subcategories; track subcategory.id) {
+    <div class="sub-list">
+      @for(subproduct of subcategory.subcategories; track subproduct.id) {
+        <div class="sub-item" (click)="redirectToProduct(subcategory.name, subproduct.name)">
+          <img [src]="subproduct.img" class="sub-img">
+          <p class="sub-name">{{subproduct.name}}</p>
+        </div>
+      }
+    </div>
+  }
+  <app-our-product-list></app-our-product-list>
+}
+

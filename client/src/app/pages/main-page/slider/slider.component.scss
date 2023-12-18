@@ -11,3 +11,19 @@
   height: 350px;
   width: 100%;
 }
+
+::ng-deep .slick-prev {
+  left: 0 !important;
+  z-index: 1 !important;
+  margin-left: 10px;
+}
+
+::ng-deep .slick-next {
+  right: 0 !important;
+  z-index: 1 !important;
+  margin-right: 10px;
+}
+
+::ng-deep .slick-dots {
+  bottom: 0 !important;
+}

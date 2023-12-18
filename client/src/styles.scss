@@ -32,18 +32,23 @@ img {
    font-size: 25px !important;
 }
 
-.slick-prev {
-  left: 0 !important;
-  z-index: 1 !important;
-  margin-left: 10px;
-}
-
-.slick-next {
-  right: 0 !important;
-  z-index: 1 !important;
-  margin-right: 10px;
-}
-
 .slick-dots {
   bottom: 0 !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
 }

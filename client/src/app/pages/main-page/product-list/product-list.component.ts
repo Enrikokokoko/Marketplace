@@ -4,6 +4,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { PRODUCT } from '../../../shared/constants/product/product';
 import { PRODUCT_CONFIG } from '../../../shared/constants/product/product-config';
 import { ProductComponent } from './product/product.component';
+import { Product, Product_One } from '../../../shared/interface/product';
 
 @Component({
   selector: 'app-product-list',
@@ -13,6 +14,6 @@ import { ProductComponent } from './product/product.component';
   styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent {
-  public products = PRODUCT;
+  public products: Product[] = PRODUCT;
   public productConfig = PRODUCT_CONFIG;
 }

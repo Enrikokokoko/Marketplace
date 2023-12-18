@@ -16,4 +16,11 @@ export class FooterComponent {
   public helpInfo = HELP; 
   public companyInfo = COMPANY_INFO; 
   public iconInfo = STAY_WITH_US; 
+
+  public smoothScroll(): void {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
 }

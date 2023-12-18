@@ -94,4 +94,24 @@
     height: 95px;
     width: 210px;
   }
+
+  .error {
+    font-size: 13px;
+    color: #c60000;
+  }
+
+  .invalid {
+    outline: none;
+    border: 1px solid #c60000;
+  }
+
+  .email {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .password {
+    display: flex;
+    flex-direction: column;
+  }
 }

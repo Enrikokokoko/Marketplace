@@ -1,8 +1,12 @@
 <div class="item">
-  <img [src]="item.img" class="img" routerLink="product">
-  <div>
+  <div class="item_block-img">
+    <img [src]="item.img" class="img" routerLink="product" (click)="redirectToProductPage(item.name)">
+  </div>
+  <div class="item__info">
     <p class="item__title">{{item.name}}</p>
-    <app-product-evaluation-and-feedback [item]="item"></app-product-evaluation-and-feedback>
-    <app-product-price-and-button [item]="item"></app-product-price-and-button>
+    <div class="item__details">
+      <app-product-evaluation-and-feedback [item]="item"></app-product-evaluation-and-feedback>
+      <app-product-price-and-button [item]="item"></app-product-price-and-button>
+    </div>
   </div>
 </div>
