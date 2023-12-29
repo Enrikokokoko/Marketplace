@@ -17,7 +17,7 @@ export const PRODUCT: Product[] = [
     discountPrice: 820,
     score: '4.5',
     id: 2,
-    quantity: 1
+    quantity: 6
   },
   {
     name: 'PlayStation 5 Slim',
@@ -44,7 +44,7 @@ export const PRODUCT: Product[] = [
     discountPrice: 899,
     score: '4',
     id: 5,
-    quantity: 2
+    quantity: 4
   },
   {
     name: 'Monitor MSI OPTIX BLACK',
@@ -53,7 +53,7 @@ export const PRODUCT: Product[] = [
     discountPrice: 599,
     score: '5',
     id: 6,
-    quantity: 2
+    quantity: 3
   },
 ];
 
@@ -154,7 +154,7 @@ export const PRODUCT_ONE: Product_One[] = [
     ],
     price: 299,
     discountPrice: 249,
-    id: 1,
+    id: 7,
   },
 ];
 
@@ -165,8 +165,8 @@ export const PRODUCTS: Product[] = [
     price: 2499,
     discountPrice: 2399,
     score: '4',
-    id: 1,
-    quantity: 1
+    id: 8,
+    quantity: 10
   },
   {
     name: 'LG Twin Wash',
@@ -174,7 +174,7 @@ export const PRODUCTS: Product[] = [
     price: 5149,
     discountPrice: 5099,
     score: '5',
-    id: 2,
+    id: 9,
     quantity: 2
   },
   {
@@ -183,7 +183,7 @@ export const PRODUCTS: Product[] = [
     price: 799,
     discountPrice: NaN,
     score: '5',
-    id: 3,
+    id: 10,
     quantity: 2
   },
   {
@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
     price: 2258,
     discountPrice: 2220,
     score: '4.5',
-    id: 4,
+    id: 11,
     quantity: 7
   },
   {
@@ -201,7 +201,7 @@ export const PRODUCTS: Product[] = [
     price: 2499,
     discountPrice: 2399,
     score: '4',
-    id: 5,
+    id: 12,
     quantity: 5
   },
   {
@@ -210,7 +210,7 @@ export const PRODUCTS: Product[] = [
     price: 5149,
     discountPrice: 5099,
     score: '5',
-    id: 6,
+    id: 13,
     quantity: 2
   },
   {
@@ -219,7 +219,7 @@ export const PRODUCTS: Product[] = [
     price: 799,
     discountPrice: NaN,
     score: '5',
-    id: 7,
+    id: 14,
     quantity: 2
   },
   {
@@ -228,7 +228,7 @@ export const PRODUCTS: Product[] = [
     price: 2258,
     discountPrice: 2220,
     score: '4.5',
-    id: 8,
+    id: 15,
     quantity: 6
   },
   {
@@ -237,7 +237,7 @@ export const PRODUCTS: Product[] = [
     price: 2499,
     discountPrice: 2399,
     score: '4',
-    id: 9,
+    id: 16,
     quantity: 2
   },
   {
@@ -246,8 +246,8 @@ export const PRODUCTS: Product[] = [
     price: 5149,
     discountPrice: 5099,
     score: '5',
-    id: 10,
-    quantity: 2
+    id: 17,
+    quantity: 3
   },
   {
     name: 'iPad air',
@@ -255,8 +255,8 @@ export const PRODUCTS: Product[] = [
     price: 799,
     discountPrice: NaN,
     score: '5',
-    id: 11,
-    quantity: 2
+    id: 18,
+    quantity: 4
   },
   {
     name: 'Filmadora Profissional Xdcam Pxw-z150 4k Sony',
@@ -264,8 +264,8 @@ export const PRODUCTS: Product[] = [
     price: 2258,
     discountPrice: 2220,
     score: '4.5',
-    id: 12,
-    quantity: 1
+    id: 19,
+    quantity: 6
   },
   {
     name: 'Porsche Design BOOK ONE',
@@ -273,8 +273,8 @@ export const PRODUCTS: Product[] = [
     price: 2499,
     discountPrice: 2399,
     score: '4',
-    id: 13,
-    quantity: 2
+    id: 20,
+    quantity: 3
   },
   {
     name: 'LG Twin Wash',
@@ -282,7 +282,7 @@ export const PRODUCTS: Product[] = [
     price: 5149,
     discountPrice: 5099,
     score: '5',
-    id: 14,
+    id: 21,
     quantity: 8
   },
   {
@@ -291,8 +291,8 @@ export const PRODUCTS: Product[] = [
     price: 799,
     discountPrice: NaN,
     score: '5',
-    id: 15,
-    quantity: 2
+    id: 22,
+    quantity: 5
   },
   {
     name: 'Filmadora Profissional Xdcam Pxw-z150 4k Sony',
@@ -300,8 +300,8 @@ export const PRODUCTS: Product[] = [
     price: 2258,
     discountPrice: 2220,
     score: '4.5',
-    id: 16,
-    quantity: 2
+    id: 23,
+    quantity: 3
   },
   {
     name: 'Porsche Design BOOK ONE',
@@ -309,8 +309,8 @@ export const PRODUCTS: Product[] = [
     price: 2499,
     discountPrice: 2399,
     score: '4',
-    id: 17,
-    quantity: 2
+    id: 24,
+    quantity: 4
   },
   {
     name: 'LG Twin Wash',
@@ -318,7 +318,7 @@ export const PRODUCTS: Product[] = [
     price: 5149,
     discountPrice: 5099,
     score: '5',
-    id: 18,
+    id: 25,
     quantity: 3
   },
 ];

@@ -1,4 +1,4 @@
-@import '../../../assets/styles/variables.scss';
+@import "../../../assets/styles/variables.scss";
 
 :host {
   background-color: $opacity-blue;
@@ -79,13 +79,11 @@
     width: 70%;
   }
 
-  .quantity {
+  .counter {
     display: flex;
-    align-items: center;
     width: 100%;
     justify-content: flex-end;
-    gap: 10px;
-  }
+   }
 
   .product {
     display: flex;
@@ -97,30 +95,6 @@
   .img {
     width: 80px;
     height: 80px;
-  }
-
-  .count {
-    display: flex;
-    background-color: rgb(184, 183, 183);
-    border: 1px solid gray;
-    border-radius: 10px;
-    width: 25px;
-    justify-content: center;
-  }
-
-  .plus {
-    width: 40px;
-    height: 40px;
-    margin-left: -15px;
-    cursor: pointer;
-  }
-
-.minus {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    fill:yellow;
-    color: red;
   }
 
   .dots {
@@ -146,7 +120,7 @@
   .empty-text {
     font-size: 20px;
   }
-  
+
   .price {
     text-decoration: line-through;
     color: gray;
@@ -171,7 +145,7 @@
     position: sticky;
     bottom: 0;
     height: 100px;
-    background-color:white;
+    background-color: white;
   }
 
   .continue-purchases {
@@ -211,7 +185,6 @@
   .order-button:hover {
     background-color: rgb(28, 28, 101);
   }
-
 
   .total-price {
     display: flex;

@@ -9,7 +9,7 @@
       <span class="sales__price">{{item.price}} $</span>
     </div>
   }
-  <button class="cart-button" (click)="addItem(item)">
+  <button class="cart-button" (click)="statusItem(item)" [ngClass]="{selected: statusButton(item.id)}">
     <img [src]="cart" alt="shopping-cart" class="cart">
   </button>
 </div>

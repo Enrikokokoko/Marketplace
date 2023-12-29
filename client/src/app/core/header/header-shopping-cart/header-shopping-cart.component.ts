@@ -5,6 +5,7 @@ import { ShoppingCartComponent } from '../../shopping-cart/shopping-cart.compone
 import { Product } from '../../../shared/interface/product';
 import { ProductPageService } from '../../../shared/services/product-page.service';
 import { PopupService } from '../../../shared/services/popup.service';
+import { ProductQuantities } from '../../../shared/interface/quantity';
 
 @Component({
   selector: 'app-header-shopping-cart',
@@ -22,6 +23,8 @@ export class HeaderShoppingCartComponent {
 
   public cartItem: Product[] = [];
   public localItem!: string | null
+  public localQuantity!: string | null
+  public itemQuantity: ProductQuantities = {}
 
   public constructor(
    private productPageService : ProductPageService,
@@ -33,28 +36,37 @@ export class HeaderShoppingCartComponent {
       this.isOpen = value
     })
 
-    if(typeof localStorage !== 'undefined') {
-      this.localItem = localStorage.getItem('cart')
-      if(this.localItem !== null) {
-        this.cartItem = JSON.parse(this.localItem)
-      }
-    }
-
-    this.productPageService.cartCount$.subscribe((value) => {
+    this.productPageService.quantityCount$.subscribe((value) => {
       if(value) {
-        this.count = value
+        let sum = 0
+        for(let key in value) {
+          sum += value[key]
+        }
+        this.count = sum
       } else {
-        this.count = this.cartItem.length
+        if(typeof localStorage !== 'undefined') {
+          this.localQuantity = localStorage.getItem('productQuantity')
+
+          if(this.localQuantity !== null) {
+            this.itemQuantity = JSON.parse(this.localQuantity)
+          }
+        }
+
+        let sum = 0
+        for(let key in this.itemQuantity) {
+          sum += value[key]
+        }
+        this.count = sum
       }
     })
 
+    this.productPageService.displayItemQuantity()
     this.productPageService.updateCountCart()
   }
 
   public openShoppingCart(): void {
     this.statusShoppingCart = true
     let num = 0
-    console.log(num);
     num++
     this.popupService.togglePopup(this.statusShoppingCart)
   }

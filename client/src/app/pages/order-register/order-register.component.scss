@@ -1,0 +1,33 @@
+main {
+  padding: 0px 30px;
+}
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(
+      white,
+      rgb(199, 199, 255)
+    );
+  }
+  
+  .logo {
+    width: 200px;
+    height: 80px;
+  }
+  
+  .list {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  .count {
+    color: rgb(126, 126, 218);
+  }
+

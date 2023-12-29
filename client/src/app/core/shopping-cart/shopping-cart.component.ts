@@ -5,11 +5,15 @@ import { BLACK_CROSS, CROSS, DOTS, EMPTY_CART, MINUS, PLUS } from '../../shared/
 import { ProductPageService } from '../../shared/services/product-page.service';
 import { Subject } from 'rxjs';
 import { PopupService } from '../../shared/services/popup.service';
+import { CounterComponent } from './counter/counter.component';
+import { ProductQuantities } from '../../shared/interface/quantity';
+import { RouterModule } from '@angular/router';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-shopping-cart',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CounterComponent, RouterModule],
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.scss'
 })
@@ -27,40 +31,81 @@ export class ShoppingCartComponent {
   public cartItem: Product[] = [];
   public items: Product[] = [];
   public localItem!: string | null
-  public totalPrice!: number
+  public localQuantity!: string | null
+  public itemQuantity: ProductQuantities = {}
+  public totalPrice: number = 0
 
-  public constructor(private productPageService: ProductPageService, private popupService: PopupService) {
+  public constructor(private productPageService: ProductPageService, private popupService: PopupService, private authService: AuthService) {
 
   }
 
   public ngOnInit(): void {
-    this.productPageService.cartItem$.subscribe((value) => {
-      this.cartItem = value
-    })
-    this.productPageService.displayCartItem()
-    let sum = 0
-    
-    for(let item of this.cartItem) {
-      this.quantity = this.productPageService.getProductQuantity(+item.id)
-      if(item.discountPrice) {
-        sum += (+item.discountPrice)
-      } else {
-        sum += (+item.price)
+    if(typeof localStorage !== 'undefined') {
+      this.localItem = localStorage.getItem('cart')
+      this.localQuantity = localStorage.getItem('productQuantity')
+      if(this.localItem !== null) {
+        this.cartItem = JSON.parse(this.localItem)
+      }
+      if(this.localQuantity !== null) {
+        this.itemQuantity = JSON.parse(this.localQuantity)
       }
     }
-    this.totalPrice = sum
+    this.productPageService.quantityCount$.subscribe((value) => {
+      if(value) {
+        this.itemQuantity = value
+        this.itemPrice();
+      } else {
+        if(typeof localStorage !== 'undefined') {
+          this.localQuantity = localStorage.getItem('productQuantity')
+
+          if(this.localQuantity !== null) {
+            this.itemQuantity = JSON.parse(this.localQuantity)
+          }
+        }
+      }
+    }
+    )
+    this.productPageService.cartItem$.subscribe((value) => {
+      if(value) {
+        this.cartItem = value 
+        this.itemPrice();
+      }
+    })
+    this.itemPrice();
+
+    this.productPageService.displayItemQuantity()
+    this.productPageService.displayCartItem()
+    this.productPageService.updateCountCart()
+  }
+  
+  public itemPrice(): void {
+    this.totalPrice = 0;
+
+    for (let item of this.cartItem) {
+      if (item.discountPrice) {
+        this.totalPrice += (+item.discountPrice * (this.itemQuantity[item.id] || 1));
+      } else {
+        this.totalPrice += (+item.price * (this.itemQuantity[item.id] || 1));
+      }
+    }
   }
 
   public getQuantity(itemId: number) {
-    this.quantity = this.productPageService.getProductQuantity(+itemId)
+    if(this.productPageService.getProductQuantity(+itemId)){
+      return this.productPageService.getProductQuantity(+itemId)
+    } else {
+      return this.itemQuantity[itemId]
+    }
   }
 
   public increaseQuantity(itemId: number) {
     for(let item of this.cartItem) {
       if(item.id === itemId){
-        if(this.quantity > item.quantity) {
+        console.log('item.quantity', item.quantity);
+        if(this.quantity >= item.quantity) {
           return
         } else {
+          this.quantity++
           this.productPageService.increaseQuantity(itemId)
         }
       }
@@ -68,11 +113,12 @@ export class ShoppingCartComponent {
   }
 
   public decreaseQuantity(itemId: number) {
-    if(this.quantity < 1) {
-      return
-    } else {
-      this.productPageService.decreaseQuantity(itemId)
-    }
+        if(this.quantity < 1) {
+          return
+        } else {
+          this.quantity--
+          this.productPageService.decreaseQuantity(itemId)
+        }
   }
 
   public removeItem(item: Product) {
@@ -108,6 +154,11 @@ export class ShoppingCartComponent {
 
   public closePopup() {
     this.popupService.togglePopup(false);
+  }
+
+  public redirectToOrderPage() {
+    this.popupService.togglePopup(false);
+    this.authService._openHeader$.next(false);
   }
 
   public ngOnDestroy(): void {

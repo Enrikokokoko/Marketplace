@@ -14,10 +14,8 @@
             </div>
             <div class="name-count">
               <p>{{item.name}}</p>       
-              <div class="quantity">
-                <img [src]="minus" class="minus" (click)="decreaseQuantity(+item.id)">
-                <div class="count">{{quantity}}</div>
-                <img [src]="plus" class="plus" (click)="increaseQuantity(+item.id)">
+              <div class="counter">
+                <app-counter [quantity]="getQuantity(+item.id)" [item]="item"></app-counter>
               </div>
             </div>
           </div>
@@ -27,10 +25,10 @@
             </div>
             <div>
               @if(item.discountPrice){
-                <p class="price">${{item.price}}</p>
-                <p class="discount-price">${{item.discountPrice}}</p>
+                <p class="price">${{item.price * itemQuantity[item.id]}}</p>
+                <p class="discount-price">${{item.discountPrice * itemQuantity[item.id]}}</p>
               } @else {
-                <p class="only-price">${{item.price}}</p>
+                <p class="only-price">${{item.price * itemQuantity[item.id]}}</p>
               }
             </div>
           </div>
@@ -38,17 +36,17 @@
       }
 
       <div class="order">
-        <div class="continue-purchases">
+        <div class="continue-purchases" (click)="closePopup()">
           <p>continue shopping</p>
         </div>
         <div class="total-price">
           <p class="price-value">${{totalPrice}}</p>
-          <button class="order-button">Place order</button>
+          <button class="order-button" routerLink="order-registr" (click)="redirectToOrderPage()">Place order</button>
         </div>
       </div>
     } @else {
       <div class="empty">
-        <p class="empty-text">'Shopping cart is empty, but it's never too late to fix that</p>
+        <p class="empty-text">Shopping cart is empty, but it's never too late to fix that</p>
         <img [src]="emptyCart" class="empty-img">
       </div>
     }

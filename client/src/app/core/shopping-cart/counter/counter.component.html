@@ -1,0 +1,5 @@
+<div class="quantity">
+  <button class="minus" (click)="decreaseQuantity(+item.id)" [ngClass]="{'disabled': quantity <= 1}">—</button>
+  <div class="count">{{quantity}}</div>
+  <button class="plus" (click)="increaseQuantity(+item.id)" [ngClass]="{'disabled': quantity >= item.quantity}">+</button>
+</div>

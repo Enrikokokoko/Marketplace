@@ -27,6 +27,14 @@
   background-color: rgb(28, 28, 239);
 }
 
+.selected {
+  // pointer-events: none;
+  background-color: rgb(169, 168, 168);
+}
+.selected:hover {
+  background-color: rgb(202, 128, 128);
+}
+
 .sales {
   &__discount {
     padding-right: 5px;

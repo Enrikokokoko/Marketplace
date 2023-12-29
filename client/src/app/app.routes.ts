@@ -71,7 +71,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'product/order',
+    path: 'order-registr',
     loadComponent: () =>
       import('./pages/order-register/order-register.component').then(
         (m) => m.OrderRegisterComponent
